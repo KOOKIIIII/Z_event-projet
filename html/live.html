@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>evenement z-event</title>
+  <link href="../css/live.css" rel="stylesheet" />
+</head>
+
+
+<body>
+  <header>
+  <!-- barre de menu-->
+    <nav class="navigation">
+        <a href="../html/index.html">Accueil</a>
+        <a href="../html/actualite.html">Actualité</a>
+        <a href="../html/live.html">Live</a>
+        <a href="../html/connexion.html" class="connexion">Mon espace</a>
+    </nav>
+
+
+
+    <div class="filter-container">
+      <div class="filter">
+          <label for="day">Jour:</label>
+          <select id="day">
+              <option value="vendredi">Vendredi</option>
+              <option value="samedi">Samedi</option>
+              <option value="dimanche">Dimanche</option>
+          </select>
+      </div>
+      
+      <div class="filter">
+          <label for="theme">Thématique:</label>
+          <select id="theme">
+              <option value="fps">FPS</option>
+              <option value="mmorpg">MMORPG</option>
+              <option value="atomegame">Atome Game</option>
+          </select>
+      </div>
+      
+      <div class="filter">
+          <label for="streamer">Streamer:</label>
+          <select id="streamer">
+              <!-- Add more streamer options as needed -->
+              <option value="streamer1">Alexclick</option>
+              <option value="streamer2">Alpahcast</option>
+              <option value="streamer3">Altair</option>
+              <option value="streamer1">Angle droit</option>
+              <option value="streamer1">Antoine Daniel</option>
+              <option value="streamer1">Baghera Jones</option>
+              <option value="streamer1">Berlu</option>
+              <option value="streamer1">BigFlo</option>
+              <option value="streamer1">BlitzStream</option>
+              <option value="streamer1">Bob Lennon</option>
+              <option value="streamer1">Bren</option>
+              <option value="streamer1">Camak</option>
+              <option value="streamer1">CarlJr</option>
+              <option value="streamer1">Ceb</option>
+              <option value="streamer1">Chap</option>
+              <option value="streamer1">Chowh1</option>
+              <option value="streamer1">Dach</option>
+              <option value="streamer1">Doigby</option>
+              <option value="streamer1">Domingo</option>
+              <option value="streamer1">DrFreeGood</option>
+              <option value="streamer1">Etoiles</option>
+              <option value="streamer1">Gius</option>
+              <option value="streamer1">GobGG</option>
+              <option value="streamer1">Gom4rt</option>
+              <option value="streamer1">Horty</option>
+              <option value="streamer1">ImSoFresh</option>
+              <option value="streamer1">Jbzz</option>
+              <option value="streamer1">Jean Massiet</option>
+              <option value="streamer1">Jeel</option>
+              <option value="streamer1">Jiraya</option>
+              <option value="streamer1">Kenny</option>
+              <option value="streamer1">Lapi</option>
+              <option value="streamer1">Lebouseuh</option>
+              <option value="streamer1">Lege</option>
+              <option value="streamer1">LittleBigWhale</option>
+              <option value="streamer1">Mister MV</option>
+              <option value="streamer1">MoMaN</option>
+              <option value="streamer1">Mynthos</option>
+              <option value="streamer1">NBK</option>
+              <option value="streamer1">PapeSan</option>
+              <option value="streamer1">Ponce</option>
+              <option value="streamer1">Shaunz</option>
+
+          </select>
+      </div>
+
+      <button onclick="applyFilters()">Appliquer les filtres</button>
+  </div>
+
+  <div id="results"></div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

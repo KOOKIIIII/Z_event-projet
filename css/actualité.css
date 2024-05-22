@@ -1,0 +1,151 @@
+body {
+    margin: 0;/*aucun espace entre les bords de cet élément et ses éléments adjacents ou son conteneur parent*/
+    background-color: black; /*  couleur de fond */
+  font-family: Arial Narrow, sans-serif; /*police*/
+  font-size: 20px;
+  
+}
+
+
+/*______________________________________________________________________________________________________________________________________________*/
+
+/* Styles de la barre de navigation */
+.navigation {
+    display: flex;/*efficace pour disposer, aligner et distribuer l'espace*/
+    align-items: center; /*pour aligner les éléments enfants le long de l'axe croisé*/
+    background-color: #1E1E1E;
+    padding: 10px 20px; /* (haut et bas px) / (gauche et droite px) */
+    font-size: 15px;
+}
+
+.navigation a {
+    color: white;/* couleur du texte*/
+    text-decoration: none;/* supprime déco */
+    padding: 10px 15px;/* (haut et bas px) / (gauche et droite px) */
+}
+
+.navigation a:hover {
+    background-color: #3C3E3F;/* couleur du fond au survol*/;
+}
+
+.connexion {
+    margin-left: auto; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
+    border: 2px solid white;/* (l'épaisseur) / (bordure continue et pleine) / (couleur) */
+    border-radius: 5px; /* pour arrondir les coins */
+}
+
+/*______________________________________________________________________________________________________________________________________________*/
+
+
+/* titre*/
+
+.title h1 {
+    color: white;
+    text-align: center;
+}
+
+/*______________________________________________________________________________________________________________________________________________*/
+
+/* presentation vidéo */
+
+section {
+    background-color: black;
+    max-width: 1100px; /* limite la largeur à 600px*/
+    margin: 20px auto ;
+    padding: 20px;
+}
+
+div {
+    
+    color:white;
+    border-radius: 5px;
+
+}
+
+div a{
+    display: flex;
+    height: 200px;
+    gap:24px;
+    row-gap: 30px;
+    column-gap: 30px;
+
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 50px;
+    padding: 10px;
+    cursor: pointer; /* Curseur pointeur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+
+.video img {
+    border-radius: 2px;
+    width: 363px;
+    height: 200px;
+    border: 4px solid #45a049;
+    border-radius: 5px;
+
+
+}
+
+.video p{
+    margin: 2px 0;
+}
+
+div ul {
+    text-align: left;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    margin-left: -60px;
+}
+
+div a {
+    text-decoration: none;
+    color: white;
+}
+
+/*______________________________________________________________________________________________________________________________________________*/
+/*button alerte*/
+
+.alerte {
+    background-color: #45a049 ;
+    color: white;
+    margin-left: 500px; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
+
+}
+
+
+/*______________________________________________________________________________________________________________________________________________*/
+/* popup */
+
+#loginalerte {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1001;
+  }
+
+  #overlay_bis {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;/* indique ordre couche de page*/
+  }

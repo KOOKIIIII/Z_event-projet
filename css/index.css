@@ -1,0 +1,202 @@
+body {
+    margin: 0;/*aucun espace entre les bords de cet élément et ses éléments adjacents ou son conteneur parent*/
+    background-color:#3C3E3F; /*  couleur de fond */
+  font-family: Arial Narrow, sans-serif; /*police*/
+  font-size: 20px;
+}
+
+/* barre de navigation                                                                                                                                >ICI<  */
+.navigation {
+    display: flex;/*efficace pour disposer, aligner et distribuer l'espace*/
+    align-items: center; /*pour aligner les éléments enfants le long de l'axe croisé*/
+    background-color: #1E1E1E;
+    padding: 10px 20px; /* (haut et bas px) / (gauche et droite px) */
+    font-size: 15px;
+}
+
+.navigation a {
+    color: white;/* couleur du texte*/
+    text-decoration: none;/* supprime déco */
+    padding: 10px 15px;/* (haut et bas px) / (gauche et droite px) */
+}
+
+.navigation a:hover {
+    background-color: #3C3E3F;/* couleur du fond au survol*/;
+}
+
+.connexion {
+    margin-left: auto; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
+    border: 2px solid white;/* (l'épaisseur) / (bordure continue et pleine) / (couleur) */
+    border-radius: 5px; /* pour arrondir les coins */
+}
+
+
+/*___________________________________________________________________________________________________________________________________________________________*/
+
+/* Image Z-Event */
+.fond-image {
+    display: block;/*prendra toute la largeur disponible*/
+    margin: 20px auto; /* Centre l'image horizontalement */
+    border-radius: 15px; /* Bords arrondis */
+    max-width: 80%; /* Limite la taille de l'image à 90% de la largeur de son conteneur */
+    border: 2px solid white;
+
+}
+
+
+/*___________________________________________________________________________________________________________________________________________________________*/
+
+/* def text*/   
+.def{
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    max-width: 1000px; /* Limite la largeur du conteneur à 600px */
+    margin: 20px auto; /* Centrage horizontal */
+    padding: 20px;
+  
+}
+
+/*___________________________________________________________________________________________________________________________________________________________*/
+
+
+/*button donation*/ 
+.donation {
+    text-align: center; /* Centre le contenu du bloc */
+    margin: 20px; /* Ajoute de l'espace autour du bloc */
+}
+
+
+.donation-button {
+    background-color: #3C3E3F; /* Couleur de fond gris */
+    color: white; /* Texte blanc */
+    padding: 10px 20px; /* Espacement interne autour du texte */
+    text-decoration: none; /* Enlève le soulignement du texte */
+    font-size: 16px; /* Taille du texte */
+    border-radius: 5px; /* Bords arrondis */
+    transition: background-color 0.3s; /* Animation lors du survol */
+    border: 2px solid white;
+}
+
+.donation-button:hover {
+    background-color: #45a049; /* Couleur plus foncée lors du survol */
+}
+
+
+/*___________________________________________________________________________________________________________________________________________________________*/
+
+
+/* En ce moment */
+.slider-container {
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+div h2 {
+    color: white;
+}
+
+.slider {
+    display: flex;
+    justify-content: flex-start; /* Align slides to the start horizontally */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    width: 100%; /* Full width of the container */
+    max-width: 1000px; /* Maximum width of the slider */
+    padding: 10px; /* Optional: Add padding around the slider */
+
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 110%;
+    transform: translateY(-40%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    margin-inline: 350px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+iframe{
+    border: 4px solid rgba(0, 0, 0, 0.5);}
+
+/*___________________________________________________________________________________________________________________________________________________________*/
+
+/* lien vers streamer*/ 
+
+.streamer {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr); /* Crée 3 colonnes de taille égale */
+    grid-gap: 20px; /* Espacement entre les colonnes et les lignes */
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 60px; /* Supprime le padding par défaut */
+    margin: 60px; /* Marge externe */
+    
+}
+
+.presentation{
+    color: white;
+    text-align: center;
+
+}
+
+
+.streamerbtn {
+    background-color: black ; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur pointeur */
+    font-size: 16px; /* Taille du texte */
+    display: flex; /* Utilisation de Flexbox pour aligner l'image et le texte */
+    align-items: center; /* Centrage vertical des éléments à l'intérieur */
+    justify-content:space-between; /* même écart entre tout élément*/
+    gap: 20px; /* Espace entre l'image et le texte */
+    margin: 20px;
+    width: 275px;
+    transition: border-color 0.7s, background-color 0.7s, box-shadow 1s, transform 0.7s ease;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+section {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Hauteur totale de la fenêtre de visualisation */
+    margin: 0; /* Enlève les marges par défaut */
+}
+
+button:hover,
+button:focus {
+    background-color: #45a049;
+    transition: border-color 0.7s, background-color 0.7s, box-shadow 1s, transform 0.7s ease;
+    transform: scale(1.1);
+
+}
+
+
+/*___________________________________________________________________________________________________________________________________________________________*/
+

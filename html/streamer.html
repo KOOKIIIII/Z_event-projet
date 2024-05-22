@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/streamer.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li onclick="showSection('accueil')">Accueil</li>
+                <li onclick="showSection('Saisie')">Saisie</li>
+                <li onclick="showSection('statistique')">Statistique</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div id="accueil" class="content-section">
+                <div class="user-status">
+                    <span>.....Vous êtes connecté</span>
+                </div>
+                <h2> Aujourd'hui les lives prévu son :</h2>
+                <p> - Alexclick : GTA / monde ouvert de 18h à 19h30.</p>
+                <p> - titi :final fantasy : monde ouvert 19h à 20h </p>
+            </div>
+
+            
+
+            <div id="statistique" class="content-section" style="display: none;">
+              <div>
+                <span> ...Super un live !</span>
+
+                <div id="live" class="content-section" style="display: none;">
+                    <div class="login-form">
+                        <h2>CONNEXION ADMIN</h2>
+                        <form id="login">
+                            <div class="input-group">
+                                <label for="email">Nom d'utilisateur</label>
+                                <input type="text" id="email" name="email" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <button type="submit">Connexion</button>
+                        </form>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/streamer.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* style */
+body {
+    margin: 0;/*aucun espace entre les bords de cet élément et ses éléments adjacents ou son conteneur parent*/
+    background-color:#3C3E3F; /*  couleur de fond */
+  font-family: Arial Narrow, sans-serif; /*police*/
+  font-size: 20px;
+}
+
+/* Styles de la barre de navigation */
+.navigation {
+    display: flex;/*efficace pour disposer, aligner et distribuer l'espace*/
+    align-items: center; /*pour aligner les éléments enfants le long de l'axe croisé*/
+    background-color: #1E1E1E;
+    padding: 10px 20px; /* (haut et bas px) / (gauche et droite px) */
+    font-size: 15px;
+}
+
+.navigation a {
+    color: white;/* couleur du texte*/
+    text-decoration: none;/* supprime déco */
+    padding: 10px 15px;/* (haut et bas px) / (gauche et droite px) */
+}
+
+.navigation a:hover {
+    background-color: #3C3E3F;/* couleur du fond au survol*/;
+}
+
+.connexion {
+    margin-left: auto; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
+    border: 2px solid white;/* (l'épaisseur) / (bordure continue et pleine) / (couleur) */
+    border-radius: 5px; /* pour arrondir les coins */
+}
+
+/*_________________________________________________________________________________________________________________________________________________________________*/
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    padding: 10px;
+    
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid white ;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #3C3E3F;
+    color: white;
+
+}
+
+
+select{
+    background-color: #3C3E3F;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+
+button {
+    padding: 10px;
+    background-color: #3C3E3F;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#results {
+    margin-top: 20px;
+    background-color: #3C3E3F;
+    padding: 20px;
+    border: 2px solid white;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    max-width: 1000px; /* Limite la largeur du conteneur à 600px */
+    margin: 20px auto; /* Centrage horizontal */
+    padding: 20px;
+}
+
+
+
+

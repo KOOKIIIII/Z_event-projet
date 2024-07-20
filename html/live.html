@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>evenement z-event</title>
   <link href="../css/live.css" rel="stylesheet" />
 </head>
@@ -12,90 +12,103 @@
 <body>
   <header>
   <!-- barre de menu-->
-    <nav class="navigation">
-        <a href="../html/index.html">Accueil</a>
-        <a href="../html/actualite.html">Actualité</a>
-        <a href="../html/live.html">Live</a>
-        <a href="../html/connexion.html" class="connexion">Mon espace</a>
-    </nav>
+  <nav class="navigation">
+    <a href="../html/index.html">Accueil</a>
+    <a href="../html/actualite.html">Actualité</a>
+    <a href="../html/live.html">Live</a>
+    <a href="../html/streamer.html">Streamer</a>
+    <a href="../html/connexion.html" class="connexion">Mon espace</a>
+</nav>
+
+   <!--filtre--> 
+   <div class="filter">
+    <label for="date"> Date :</label>
+    <select id="date">
+        <option value="all">Toutes</option>
+            <option value="option1"> Vendredi </option>
+            <option value="option2">Samedi</option>
+            <option value="option3">Dimanche</option>
+    </select>
+
+    <label for="thematique"> Thématique : </label>
+    <select id="thematique">
+            <option value="all">Toutes</option>
+            <option value="option1"> just chatting </option>
+            <option value="option2">FPS</option>
+            <option value="option3"> Jeu de rôle</option>
+            <option value="option4"> MOBA </option>
+            <option value="option5"> Horreur</option>
+            <option value="option6">Action</option>
+            <option value="option7">Aventure</option>
+            <option value="option8">Horreur</option>
+            <option value="option9">MMO</option>
+    </select>
 
 
+    <label for="streamer"> Streamer : </label>
+    <select id="streamer">
+            <option value="all">Toutes</option>
+            <option value="option1">Alpahcast</option>
+            <option value="option2">Altair</option>
+            <option value="option3">Angle droit</option>
+            <option value="option4">Antoine Daniel</option>
+            <option value="option5">Baghera Jones</option>
+            <option value="option6">Berlu</option>
+            <option value="option7">BigFlo</option>
+            <option value="option8">BlitzStream</option>
+            <option value="option9">Bob Lennon</option>
+            <option value="option10">Bren</option>
+            <option value="option11">Camak</option>
+            <option value="option12">CarlJr</option>
+            <option value="option13">Ceb</option>
+            <option value="option14">Chap</option>
+            <option value="option15">Chowh1</option>
+            <option value="option16">Dach</option>
+            <option value="option17">Doigby</option>
+            <option value="option18">Domingo</option>
+            <option value="option19">DrFreeGood</option>
+            <option value="option20">Etoiles</option>
+            <option value="option21">Gius</option>
+            <option value="option22">GobGG</option>
+            <option value="option23">Gom4rt</option>
+            <option value="option24">Horty</option>
+            <option value="option25">ImSoFresh</option>
+            <option value="option26">Jbzz</option>
+            <option value="option27">Jean Massiet</option>
+            <option value="option28">Jeel</option>
+            <option value="option29">Jiraya</option>
+            <option value="option30">Kenny</option>
+            <option value="option31">Lapi</option>
+            <option value="option32">Lebouseuh</option>
+            <option value="option33">Lege</option>
+            <option value="option34">LittleBigWhale</option>
+            <option value="option35">Mister MV</option>
+            <option value="option36">MoMaN</option>
+            <option value="option37">Mynthos</option>
+            <option value="option38">NBK</option>
+            <option value="option39">PapeSan</option>
+            <option value="option40">Ponce</option>
+            <option value="option41">Shaunz</option>
+    </select>
 
-    <div class="filter-container">
-      <div class="filter">
-          <label for="day">Jour:</label>
-          <select id="day">
-              <option value="vendredi">Vendredi</option>
-              <option value="samedi">Samedi</option>
-              <option value="dimanche">Dimanche</option>
-          </select>
-      </div>
-      
-      <div class="filter">
-          <label for="theme">Thématique:</label>
-          <select id="theme">
-              <option value="fps">FPS</option>
-              <option value="mmorpg">MMORPG</option>
-              <option value="atomegame">Atome Game</option>
-          </select>
-      </div>
-      
-      <div class="filter">
-          <label for="streamer">Streamer:</label>
-          <select id="streamer">
-              <!-- Add more streamer options as needed -->
-              <option value="streamer1">Alexclick</option>
-              <option value="streamer2">Alpahcast</option>
-              <option value="streamer3">Altair</option>
-              <option value="streamer1">Angle droit</option>
-              <option value="streamer1">Antoine Daniel</option>
-              <option value="streamer1">Baghera Jones</option>
-              <option value="streamer1">Berlu</option>
-              <option value="streamer1">BigFlo</option>
-              <option value="streamer1">BlitzStream</option>
-              <option value="streamer1">Bob Lennon</option>
-              <option value="streamer1">Bren</option>
-              <option value="streamer1">Camak</option>
-              <option value="streamer1">CarlJr</option>
-              <option value="streamer1">Ceb</option>
-              <option value="streamer1">Chap</option>
-              <option value="streamer1">Chowh1</option>
-              <option value="streamer1">Dach</option>
-              <option value="streamer1">Doigby</option>
-              <option value="streamer1">Domingo</option>
-              <option value="streamer1">DrFreeGood</option>
-              <option value="streamer1">Etoiles</option>
-              <option value="streamer1">Gius</option>
-              <option value="streamer1">GobGG</option>
-              <option value="streamer1">Gom4rt</option>
-              <option value="streamer1">Horty</option>
-              <option value="streamer1">ImSoFresh</option>
-              <option value="streamer1">Jbzz</option>
-              <option value="streamer1">Jean Massiet</option>
-              <option value="streamer1">Jeel</option>
-              <option value="streamer1">Jiraya</option>
-              <option value="streamer1">Kenny</option>
-              <option value="streamer1">Lapi</option>
-              <option value="streamer1">Lebouseuh</option>
-              <option value="streamer1">Lege</option>
-              <option value="streamer1">LittleBigWhale</option>
-              <option value="streamer1">Mister MV</option>
-              <option value="streamer1">MoMaN</option>
-              <option value="streamer1">Mynthos</option>
-              <option value="streamer1">NBK</option>
-              <option value="streamer1">PapeSan</option>
-              <option value="streamer1">Ponce</option>
-              <option value="streamer1">Shaunz</option>
+    <div class="content">
+        <!-- Les éléments à filtrer -->
+        <div class="item option1 option2 option3">Élément 1</div>
+        <div class="item option1 option2">Élément 2</div>
+        <div class="item option1 option3">Élément 3</div>
+        <div class="item option2 option3">Élément 4</div>
+        <div class="item option1">Élément 5</div>
+        <div class="item option2">Élément 6</div>
+        <div class="item option3">Élément 7</div>
+    </div>
 
-          </select>
-      </div>
+    
+   </div>
 
-      <button onclick="applyFilters()">Appliquer les filtres</button>
-  </div>
+    
+   <script src="scripts.js"></script>
 
-  <div id="results"></div>
 
-  <script src="scripts.js"></script>
 </body>
 
 </html>

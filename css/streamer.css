@@ -1,90 +1,60 @@
-body {
-    background-color: black;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    height: 100vh;
-}
+/* lien vers streamer*/ 
 
-.container {
-    display: flex;
-    width: 100%;
-}
-
-.sidebar {
-    width: 200px;
-    background-color: black;
-    color: #fff;
-    padding: 20px 0;
-    border: 2px solid #45a049b3;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    font-family: "Press Start 2P", system-ui;
-    padding: 15px 20px;
-    cursor: pointer;
-}
-
-.sidebar ul li:hover {
-    background-color: #255527;
-}
-
-.main-content {
-    flex-grow: 1;
-    padding: 20px;
-}
-
-;.main-content img{
-    margin-right: auto;
-}
-
-.content-section {
-    display: none;
-}
-
-.content-section.active {
-    display: block;
-}
-
-
-.user-status {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-
-.user-status span {
-    font-family: "Press Start 2P", system-ui;
-    margin-top: 0px;
-    font-size: 16px;
-    color: green;
-}
-
-h2 {
-    font-family:'press Start 2P', sans-serif;
-    color: #fff;
+.streamer {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr); /* Crée 3 colonnes de taille égale */
+    grid-gap: 20px; /* Espacement entre les colonnes et les lignes */
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 60px; /* Supprime le padding par défaut */
+    margin: 60px; /* Marge externe */
     
 }
 
-p {
-    font-family: 'press Start 2P', sans-serif;
-    color: #fff;
+.presentation{
+    color: white;
+    text-align: center;
+
 }
 
-.press-start-2p-regular {
-    font-family: "Press Start 2P", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+
+.streamerbtn {
+    background-color: black ; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur pointeur */
+    font-size: 16px; /* Taille du texte */
+    display: flex; /* Utilisation de Flexbox pour aligner l'image et le texte */
+    align-items: center; /* Centrage vertical des éléments à l'intérieur */
+    justify-content:space-between; /* même écart entre tout élément*/
+    gap: 20px; /* Espace entre l'image et le texte */
+    margin: 20px;
+    width: 275px;
+    transition: border-color 0.7s, background-color 0.7s, box-shadow 1s, transform 0.7s ease;
+
+}
+
+a {
+    text-decoration: none;
+}
 
 
-  .live {
-    color: white;
-  }
+section {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Hauteur totale de la fenêtre de visualisation */
+    margin: 0; /* Enlève les marges par défaut */
+}
+
+button:hover,
+button:focus {
+    background-color: #45a049;
+    transition: border-color 0.7s, background-color 0.7s, box-shadow 1s, transform 0.7s ease;
+    transform: scale(1.1);
+
+}
+
+
+/*___________________________________________________________________________________________________________________________________________________________*/

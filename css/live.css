@@ -2,8 +2,8 @@
 body {
     margin: 0;/*aucun espace entre les bords de cet élément et ses éléments adjacents ou son conteneur parent*/
     background-color:#3C3E3F; /*  couleur de fond */
-  font-family: Arial Narrow, sans-serif; /*police*/
-  font-size: 20px;
+    font-family: Arial Narrow, sans-serif; /*police*/
+    font-size: 20px;
 }
 
 /* Styles de la barre de navigation */
@@ -33,64 +33,25 @@ body {
 
 /*_________________________________________________________________________________________________________________________________________________________________*/
 
-.filter-container {
-    display: flex;
-    align-items: center;
-    margin: 30px;
-    padding: 10px;
-    
+.filter{
+    margin-bottom: 20px;
+    color: black;
 }
 
-.filter {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    border: 2px solid white ;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: #3C3E3F;
-    color: white;
-
+label{
+    margin-right: 10px;
 }
-
 
 select{
-    background-color: #3C3E3F;
-    border: 2px solid white;
-    border-radius: 5px;
-    color: white;
+    margin-right: 20px;
 }
 
-
-button {
-    padding: 10px;
-    background-color: #3C3E3F;
-    border: 2px solid white;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
+.content .item {
+    display: none;
+    margin: 10px 0;
+    padding:10px;
+    border: 2px solid #ccc;
 }
-
-button:hover {
-    background-color: #45a049;
-}
-
-#results {
-    margin-top: 20px;
-    background-color: #3C3E3F;
-    padding: 20px;
-    border: 2px solid white;
-    color: white;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 25px;
-    max-width: 1000px; /* Limite la largeur du conteneur à 600px */
-    margin: 20px auto; /* Centrage horizontal */
-    padding: 20px;
-}
-
 
 
 

@@ -119,11 +119,11 @@ nav.connexion a:hover {
 iframe {
     border: none; /* Suppression de la bordure */
     border-radius: 10px; /* Bords arrondis */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre douce */
+    box-shadow: 0 0 10px #1DB954
 }
 
 button.prev, button.next {
-    background-color: rgba(0, 0, 0, 0.7); /* Boutons semi-transparents */
+    background-color: #1DB954; 
     color: white;
     border: none;
     padding: 10px 15px;

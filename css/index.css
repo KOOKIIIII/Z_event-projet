@@ -1,35 +1,48 @@
 body {
-    margin: 0;/*aucun espace entre les bords de cet élément et ses éléments adjacents ou son conteneur parent*/
-    background-color:#3C3E3F; /*  couleur de fond */
-  font-family: Arial Narrow, sans-serif; /*police*/
-  font-size: 20px;
+    font-family: 'Roboto', Arial, sans-serif; /* Utilisation d'une police plus moderne */
+    background-color: #0e0e10; /* Fond noir/gris très foncé */
+    color: #e0e0e0; /* Texte légèrement gris pour moins de contraste */
+    margin: 0;
+    padding: 0;
 }
 
-/* barre de navigation                                                                                                                                >ICI<  */
-.navigation {
-    display: flex;/*efficace pour disposer, aligner et distribuer l'espace*/
-    align-items: center; /*pour aligner les éléments enfants le long de l'axe croisé*/
-    background-color: #1E1E1E;
-    padding: 10px 20px; /* (haut et bas px) / (gauche et droite px) */
-    font-size: 15px;
+header {
+    background-color: #18181b; /* En-tête légèrement plus clair pour la différenciation */
+    padding: 20px;
+    border-bottom: 2px solid #1DB954; /* Ligne de séparation verte */
 }
 
-.navigation a {
-    color: white;/* couleur du texte*/
-    text-decoration: none;/* supprime déco */
-    padding: 10px 15px;/* (haut et bas px) / (gauche et droite px) */
+nav.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: #202225; /* Fond de navigation légèrement différent */
+    border-bottom: 2px solid #1DB954; /* Ligne de séparation verte */
 }
 
-.navigation a:hover {
-    background-color: #3C3E3F;/* couleur du fond au survol*/;
+nav.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
 }
 
-.connexion {
-    margin-left: auto; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
-    border: 2px solid white;/* (l'épaisseur) / (bordure continue et pleine) / (couleur) */
-    border-radius: 5px; /* pour arrondir les coins */
+nav.navigation a:hover {
+    color: #000000; /* Vert vif pour survol des liens */
 }
 
+nav.navigation a.connexion {
+    background-color: #1DB954; /* Vert vif pour le bouton "Mon espace" */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+nav.connexion a:hover {
+    color: black;
+}
 
 /*___________________________________________________________________________________________________________________________________________________________*/
 
@@ -39,7 +52,7 @@ body {
     margin: 20px auto; /* Centre l'image horizontalement */
     border-radius: 15px; /* Bords arrondis */
     max-width: 80%; /* Limite la taille de l'image à 90% de la largeur de son conteneur */
-    border: 2px solid white;
+    border: 2px solid #1DB954;
 
 }
 
@@ -60,66 +73,66 @@ body {
 
 /*___________________________________________________________________________________________________________________________________________________________*/
 
-
-/*button donation*/ 
 .donation {
-    text-align: center; /* Centre le contenu du bloc */
-    margin: 20px; /* Ajoute de l'espace autour du bloc */
+    text-align: center;
+    margin: 20px 0;
 }
 
-
 .donation-button {
-    background-color: #3C3E3F; /* Couleur de fond gris */
-    color: white; /* Texte blanc */
-    padding: 10px 20px; /* Espacement interne autour du texte */
-    text-decoration: none; /* Enlève le soulignement du texte */
-    font-size: 16px; /* Taille du texte */
-    border-radius: 5px; /* Bords arrondis */
-    transition: background-color 0.3s; /* Animation lors du survol */
-    border: 2px solid white;
+    background-color: #1DB954; /* Couleur verte Twitch */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .donation-button:hover {
-    background-color: #45a049; /* Couleur plus foncée lors du survol */
+    background-color: #17a143; /* Légère variation de vert pour le survol */
 }
 
-
-/*___________________________________________________________________________________________________________________________________________________________*/
-
-
-/* En ce moment */
 .slider-container {
-    display: flex;
-    flex-direction: column; /* Arrange elements vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-}
-
-div h2 {
-    color: white;
+    text-align: center;
+    margin: 20px auto;
+    position: relative;
+    width: 80%;
 }
 
 .slider {
     display: flex;
-    justify-content: flex-start; /* Align slides to the start horizontally */
-    overflow-x: auto; /* Allow horizontal scrolling */
-    width: 100%; /* Full width of the container */
-    max-width: 1000px; /* Maximum width of the slider */
-    padding: 10px; /* Optional: Add padding around the slider */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
 
+.slide {
+    flex: 0 0 100%; /* Chaque slide prend 100% de la largeur du conteneur */
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+iframe {
+    border: none; /* Suppression de la bordure */
+    border-radius: 10px; /* Bords arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre douce */
 }
 
 button.prev, button.next {
-    position: absolute;
-    top: 110%;
-    transform: translateY(-40%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7); /* Boutons semi-transparents */
     color: white;
     border: none;
-    padding: 20px;
-    margin-inline: 350px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
-    z-index: 20;
+    transition: background-color 0.3s ease;
+    font-size: 1.5em;
 }
 
 button.prev {
@@ -131,72 +144,5 @@ button.next {
 }
 
 button.prev:hover, button.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
 }
-
-iframe{
-    border: 4px solid rgba(0, 0, 0, 0.5);}
-
-/*___________________________________________________________________________________________________________________________________________________________*/
-
-/* lien vers streamer*/ 
-
-.streamer {
-    display: grid;
-    grid-template-columns: repeat(3, 0fr); /* Crée 3 colonnes de taille égale */
-    grid-gap: 20px; /* Espacement entre les colonnes et les lignes */
-    list-style: none; /* Supprime les puces de la liste */
-    padding: 60px; /* Supprime le padding par défaut */
-    margin: 60px; /* Marge externe */
-    
-}
-
-.presentation{
-    color: white;
-    text-align: center;
-
-}
-
-
-.streamerbtn {
-    background-color: black ; /* Couleur de fond */
-    color: white; /* Couleur du texte */
-    padding: 10px 20px; /* Espacement intérieur */
-    border: none; /* Pas de bordure */
-    border-radius: 5px; /* Bordures arrondies */
-    cursor: pointer; /* Curseur pointeur */
-    font-size: 16px; /* Taille du texte */
-    display: flex; /* Utilisation de Flexbox pour aligner l'image et le texte */
-    align-items: center; /* Centrage vertical des éléments à l'intérieur */
-    justify-content:space-between; /* même écart entre tout élément*/
-    gap: 20px; /* Espace entre l'image et le texte */
-    margin: 20px;
-    width: 275px;
-    transition: border-color 0.7s, background-color 0.7s, box-shadow 1s, transform 0.7s ease;
-
-}
-
-a {
-    text-decoration: none;
-}
-
-
-section {
-    display: flex; /* Active Flexbox */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    height: 100vh; /* Hauteur totale de la fenêtre de visualisation */
-    margin: 0; /* Enlève les marges par défaut */
-}
-
-button:hover,
-button:focus {
-    background-color: #45a049;
-    transition: border-color 0.7s, background-color 0.7s, box-shadow 1s, transform 0.7s ease;
-    transform: scale(1.1);
-
-}
-
-
-/*___________________________________________________________________________________________________________________________________________________________*/
-

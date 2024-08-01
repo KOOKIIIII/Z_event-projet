@@ -3,39 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Connexion Admin</title>
-    <link rel="stylesheet" href="../css/logadmin.css" />
+    <title>Créer Admin</title>
+    <link rel="stylesheet" href="../css/adminlog.css" />
   </head>
   <body>
-
-    <header>
-      <nav class="navigation">
-        <a href="../html/index.html" class="home">Accueil</a>
-      </nav>
-    </header>
-
-
     <div class="login-form">
-      <h2>CONNEXION ADMIN</h2>
-      <form id="login" method="POST" action="../php/login_admin.php">
-        <input type="hidden" name="login" value="admin_login" />
-
+      <h2>CRÉATION ADMIN</h2>
+      <form id="create_admin" method="POST" action="../php/create_admin.php">
         <div class="input-group">
           <label for="name">Nom d'utilisateur</label>
           <input type="text" id="name" name="name" required />
         </div>
-
         <div class="input-group">
           <label for="password">Mot de passe</label>
           <input type="password" id="password" name="password" required />
         </div>
-
-        <button type="submit">Connexion</button>
+        <button type="submit">Créer</button>
       </form>
     </div>
-
-    
-    <script src="../js/logadmin.js"></script>
-    <script src="../js/espaceadmin.js"></script>
+    <script src="../js/createadmin.js"></script>
   </body>
 </html>

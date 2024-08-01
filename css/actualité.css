@@ -1,151 +1,179 @@
 body {
-    margin: 0;/*aucun espace entre les bords de cet élément et ses éléments adjacents ou son conteneur parent*/
-    background-color: black; /*  couleur de fond */
-  font-family: Arial Narrow, sans-serif; /*police*/
-  font-size: 20px;
-  
+    font-family: 'Roboto', Arial, sans-serif; /* Utilisation d'une police plus moderne */
+    background-color: #0e0e10; /* Fond noir/gris très foncé */
+    color: #e0e0e0; /* Texte légèrement gris pour moins de contraste */
+    margin: 0;
+    padding: 0;
 }
 
-
-/*______________________________________________________________________________________________________________________________________________*/
-
-/* Styles de la barre de navigation */
-.navigation {
-    display: flex;/*efficace pour disposer, aligner et distribuer l'espace*/
-    align-items: center; /*pour aligner les éléments enfants le long de l'axe croisé*/
-    background-color: #1E1E1E;
-    padding: 10px 20px; /* (haut et bas px) / (gauche et droite px) */
-    font-size: 15px;
-}
-
-.navigation a {
-    color: white;/* couleur du texte*/
-    text-decoration: none;/* supprime déco */
-    padding: 10px 15px;/* (haut et bas px) / (gauche et droite px) */
-}
-
-.navigation a:hover {
-    background-color: #3C3E3F;/* couleur du fond au survol*/;
-}
-
-.connexion {
-    margin-left: auto; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
-    border: 2px solid white;/* (l'épaisseur) / (bordure continue et pleine) / (couleur) */
-    border-radius: 5px; /* pour arrondir les coins */
-}
-
-/*______________________________________________________________________________________________________________________________________________*/
-
-
-/* titre*/
-
-.title h1 {
-    color: white;
-    text-align: center;
-}
-
-/*______________________________________________________________________________________________________________________________________________*/
-
-/* presentation vidéo */
-
-section {
-    background-color: black;
-    max-width: 1100px; /* limite la largeur à 600px*/
-    margin: 20px auto ;
+header {
+    background-color: #18181b; /* En-tête légèrement plus clair pour la différenciation */
     padding: 20px;
+    border-bottom: 2px solid #1DB954; /* Ligne de séparation verte */
 }
 
-div {
-    
-    color:white;
-    border-radius: 5px;
-
-}
-
-div a{
+nav.navigation {
     display: flex;
-    height: 200px;
-    gap:24px;
-    row-gap: 30px;
-    column-gap: 30px;
-
-}
-
-button {
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin: 50px;
-    padding: 10px;
-    cursor: pointer; /* Curseur pointeur */
-    display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-   
-
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: #202225; /* Fond de navigation légèrement différent */
+    border-bottom: 2px solid #1DB954; /* Ligne de séparation verte */
 }
 
-.video img {
-    border-radius: 2px;
-    width: 363px;
-    height: 200px;
-    border: 4px solid #45a049;
-    border-radius: 5px;
-
-
-}
-
-.video p{
-    margin: 2px 0;
-}
-
-div ul {
-    text-align: left;
-    list-style: none;
-    padding: 10px;
-    margin: 10px;
-    margin-left: -60px;
-}
-
-div a {
+nav.navigation a {
+    color: #ffffff;
     text-decoration: none;
-    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
 }
 
-/*______________________________________________________________________________________________________________________________________________*/
-/*button alerte*/
-
-.alerte {
-    background-color: #45a049 ;
-    color: white;
-    margin-left: 500px; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
-
+nav.navigation a:hover {
+    color: #000000; /* Vert vif pour survol des liens */
 }
 
+nav.navigation a.connexion {
+    background-color: #1DB954; /* Vert vif pour le bouton "Mon espace" */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+nav.connexion a:hover {
+    color: black;
+}
 
-/*______________________________________________________________________________________________________________________________________________*/
-/* popup */
+/* Titre principal */
+.title h1 {
+    color: #1DB954;
+    text-align: center;
+    margin: 20px 0;
+}
 
-#loginalerte {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    z-index: 1001;
-  }
-
-  #overlay_bis {
-    display: none;
+/* Overlay pour alerte */
+#overlay_bis {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;/* indique ordre couche de page*/
-  }
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 10;
+}
+
+/* Boîte de dialogue d'alerte */
+#loginalerte.modal {
+    background-color: #202124;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+    margin: 100px auto;
+    display: none;
+    z-index: 20;
+    position: relative;
+}
+
+#loginalerte p {
+    margin-bottom: 15px;
+}
+
+#loginalerte input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    outline: none;
+}
+
+.modal-buttons {
+    margin-top: 15px;
+}
+
+.modal-buttons .btn {
+    background-color: #1DB954;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-buttons .btn:hover {
+    background-color: #17a143;
+}
+
+/* Section des vidéos */
+.actualite {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #202124;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.video {
+    margin-bottom: 30px;
+}
+
+.video h2 {
+    color: #1DB954;
+    margin-bottom: 10px;
+}
+
+.video a.button-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.video img:hover {
+    transform: scale(1.05);
+}
+
+.video-info {
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.video-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.video-info li {
+    margin-bottom: 5px;
+}
+
+.alerte.btn {
+    background-color: #45a049;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.alerte.btn:hover {
+    background-color: #45a049;
+}

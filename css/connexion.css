@@ -1,82 +1,140 @@
+/* connexion.css */
+
+/* Style général du body */
 body {
-    margin: 0; /* Aucun espace autour des bords de la page */
-    display: flex; /* Utilise Flexbox */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    min-height: 100vh; /* Hauteur minimale de la fenêtre de visualisation */
-    background-color: black; /* Couleur de fond */
-    font-family: 'Arial Narrow', sans-serif; /* Police */
-    font-size: 20px;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #0e0e10; /* Fond sombre */
+  color: #e0e0e0; /* Texte légèrement gris */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
-
-
-
-.connexion {
-    margin-left: auto; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
-    border: 2px solid white;/* (l'épaisseur) / (bordure continue et pleine) / (couleur) */
-    border-radius: 5px; /* pour arrondir les coins */
+/* Overlay */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000; /* indique ordre couche de page*/
 }
 
+/* Section de validation */
+#validation {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid #1DB954;
+  z-index: 1001;
+}
 
+#validation p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Boutons de validation */
+#validation button {
+  background-color: #1DB954;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#validation button:hover {
+  background-color: #17a143;
+  transform: scale(1.05);
+}
+
+#validation button:active {
+  background-color: #138039;
+  transform: scale(1);
+}
+
+/* Bouton Retour */
+#backbtn {
+  background-color: #ff4500;
+}
+
+#backbtn:hover {
+  background-color: #e63900;
+}
+
+/* En-tête et navigation */
+header {
+  width: 100%;
+  background-color: #18181b;
+  padding: 20px 0;
+  border-bottom: 2px solid #1DB954;
+  text-align: center;
+}
+
+.navigation a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 20px;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #1DB954;
+}
+
+/* Conteneur principal */
 .container {
-    background-color:black ;
-    margin: 20px;
-    text-align: center;
-    padding: 20px;
-    width: 90%; /* Largeur relative à l'espace disponible */
-    max-width: 600px; /* Largeur maximale pour rester lisible */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Ombre pour un peu de profondeur */
-    }
-    
-
-.container h2{
-    color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
 }
-
 
 .login-option {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #45a049b3 ;
-    background-color: black;
-    border-radius: 10px;
+  background-color: #202124;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
-.login-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #45a049b3;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.login-option h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
 }
 
-.login-link:hover {
-    background-color:  #255527;
+.login-link, .logout-link, .admin-space-link, .streamer-space-link {
+  background-color: #1DB954;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
 }
 
-
-#validation {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    z-index: 1001;
-  }
-
-  #overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;/* indique ordre couche de page*/
-  }
+.login-link:hover, .logout-link:hover, .admin-space-link:hover, .streamer-space-link:hover {
+  background-color: #17a143;
+}

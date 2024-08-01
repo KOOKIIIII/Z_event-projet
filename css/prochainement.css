@@ -1,0 +1,131 @@
+body {
+    margin: 0;/*aucun espace entre les bords de cet élément et ses éléments adjacents ou son conteneur parent*/
+    background-color: #3C3E3F; /*  couleur de fond */
+  font-family: Arial Narrow, sans-serif; /*police*/
+  font-size: 20px;
+  
+}
+
+
+/*______________________________________________________________________________________________________________________________________________*/
+
+/* Styles de la barre de navigation */
+.navigation {
+    display: flex;/*efficace pour disposer, aligner et distribuer l'espace*/
+    align-items: center; /*pour aligner les éléments enfants le long de l'axe croisé*/
+    background-color: #1E1E1E;
+    padding: 10px 20px; /* (haut et bas px) / (gauche et droite px) */
+    font-size: 15px;
+}
+
+.navigation a {
+    color: white;/* couleur du texte*/
+    text-decoration: none;/* supprime déco */
+    padding: 10px 15px;/* (haut et bas px) / (gauche et droite px) */
+}
+
+.navigation a:hover {
+    background-color: #3C3E3F;/* couleur du fond au survol*/;
+}
+
+.connexion {
+    margin-left: auto; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
+    border: 2px solid white;/* (l'épaisseur) / (bordure continue et pleine) / (couleur) */
+    border-radius: 5px; /* pour arrondir les coins */
+}
+
+/*______________________________________________________________________________________________________________________________________________*/
+
+
+/* titre*/
+
+.title h1 {
+    color: white;
+    text-align: center;
+}
+
+/*______________________________________________________________________________________________________________________________________________*/
+/*button alerte*/
+
+.alerte {
+    background-color: #45a049 ;
+    color: white;
+    margin-left: 500px; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
+
+}
+/*_____________________________________________________________________________________________________________________________________________*/
+/* slider*/
+.slider-container {
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+div h2 {
+    color: white;
+}
+
+.slider {
+    display: flex;
+    justify-content: flex-start; /* Align slides to the start horizontally */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    width: 100%; /* Full width of the container */
+    max-width: 1000px; /* Maximum width of the slider */
+    padding: 10px; /* Optional: Add padding around the slider */
+
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 110%;
+    transform: translateY(-40%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    margin-inline: 350px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+iframe{
+    border: 4px solid rgba(0, 0, 0, 0.5);}
+
+/*______________________________________________________________________________________________________________________________________________*/
+/* popup */
+
+#loginalerte {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1001;
+  }
+
+  #overlay_bis {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;/* indique ordre couche de page*/
+  }

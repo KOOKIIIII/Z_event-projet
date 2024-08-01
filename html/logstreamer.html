@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connexion streamer</title>
-    <link rel="stylesheet" href="../css/logstreamer.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/logstreamer.css" />
+  </head>
+
+  <body>
+    <header>
+
+      <nav class="navigation">
+        <a href="../html/index.html" class="home">Accueil</a>
+      </nav>
+
+
+    </header>
+
     <div class="login-form">
-        <h2> CONNEXION STREAMER</h2>
-        <form id="login">
-            <div class="input-group">
-                <label for="email">E-mail</label>
-                <input type="text" id="email" name="email" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button href="streamer.html"  type="submit">Connexion</button>
-        </form>
+      <h2>CONNEXION STREAMER</h2>
+      <form id="login" method="POST" action="../php/login_streamer.php">
+        <input type="hidden" name="login" value="streamer_login" />
+        
+        
+        <div class="input-group">
+          <label for="pseudo">Pseudo</label>
+          <input type="text" id="pseudo" name="pseudo" required />
+        </div>
+
+
+        <div class="input-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <button type="submit">Connexion</button>
+
+
+      </form>
+
     </div>
+
+    
     <script src="../js/logstreamer.js"></script>
-</body>
+  </body>
 </html>

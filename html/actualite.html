@@ -1,83 +1,75 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>evenement z-event</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Événement Z-Event - Actualités</title>
   <link href="../css/actualité.css" rel="stylesheet" />
 </head>
-
-
 <body>
   <header>
-  <!-- barre de menu-->
-  <nav class="navigation">
-    <a href="../html/index.html">Accueil</a>
-    <a href="../html/actualite.html">Actualité</a>
-    <a href="../html/live.html">Live</a>
-    <a href="../html/streamer.html">Streamer</a>
-    <a href="../html/connexion.html" class="connexion">Mon espace</a>
-</nav>
-  <!-- fin-->
+    <!-- Navigation -->
+    <nav class="navigation">
+      <a href="../html/index.html">Accueil</a>
+      <a href="../html/actualite.html" class="active">Actualité</a>
+      <a href="../html/live.html">Live</a>
+      <a href="../html/streamer.html">Streamer</a>
+      <a href="../html/connexion.html" class="connexion">Mon espace</a>
+    </nav>
 
-<div class="title">
-<h1> PROCHAINEMENT :</h1>
-</div>
-
-<div id="overlay_bis"></div>
-
-<div id="loginalerte">
-  <p>Veuillez saisir votre texte :</p>
-  <input type="text" id="userInput" placeholder="Entrez votre texte ici...">
-  <br><br>
-  <button id="accept">Accepter</button>
-  <button id="cancel">Refuser</button>
-</div>
-
-<!-- vidéo-->
-  <section class="actualite">
-    <div class="video">
-      <h1> Alexclick - </h1>
-      <a href="#" class="button-link">
-        <button>
-          <img src="../image/vidéo actualiter/prochainement.png" alt=" Miniature">
-        </button>
-        <ul>
-          <li>Libellé :</li>
-          <li>Date :</li>
-          <li>PEGI :</li>
-          <br>
-          <br>
-          <br>
-          <li>Matériels:</li>
-        </ul>
-        <button class="alerte"> Alerte !</button>
-      </a>
-
-      <br>
-
-      <div class="video">
-        <a href="#" class="button-link">
-          <button>
-            <img src="../image/vidéo actualiter/prochainement.png" alt=" Miniature">
-          </button>
-          <ul>
-            <li>Libellé :</li>
-            <li>Date :</li>
-            <li>PEGI :</li>
-            <br>
-            <br>
-            <br>
-            <li>Matériels:</li>
-          </ul>
-          <button class="alerte"> Alerte !</button>
-        </a>
-      </div>
+    <!-- Titre de la page -->
+    <div class="title">
+      <h1>Prochainement :</h1>
     </div>
-  </section>
-</header>
+  </header>
 
-<script src="../js/alerte.js"></script>
+  <!-- Overlay pour alerte -->
+  <div id="overlay_bis"></div>
+
+  <!-- Boîte de dialogue d'alerte -->
+  <div id="loginalerte" class="modal">
+    <p>Veuillez saisir votre texte :</p>
+    <input type="text" id="userInput" placeholder="Entrez votre adresse mail ici...">
+    <div class="modal-buttons">
+      <button id="accept" class="btn">Accepter</button>
+      <button id="cancel" class="btn">Refuser</button>
+    </div>
+  </div>
+
+  <!-- Section des vidéos d'actualité -->
+  <section class="actualite">
+    <article class="video">
+      <h2>Alexclick - Prochainement</h2>
+      <a href="#" class="button-link">
+        <img src="../image/vidéo actualiter/prochainement.png" alt="Miniature vidéo">
+        <div class="video-info">
+          <ul>
+            <li>Libellé : <span>Exemple de libellé</span></li>
+            <li>Date : <span>JJ/MM/AAAA</span></li>
+            <li>PEGI : <span>16</span></li>
+            <li>Matériels : <span>Micro, casque, etc.</span></li>
+          </ul>
+          <button class="alerte btn">Alerte !</button>
+        </div>
+      </a>
+    </article>
+
+    <article class="video">
+      <a href="#" class="button-link">
+        <img src="../image/vidéo actualiter/prochainement.png" alt="Miniature vidéo">
+        <div class="video-info">
+          <ul>
+            <li>Libellé : <span>Exemple de libellé</span></li>
+            <li>Date : <span>JJ/MM/AAAA</span></li>
+            <li>PEGI : <span>16</span></li>
+            <li>Matériels : <span>Micro, casque, etc.</span></li>
+          </ul>
+          <button class="alerte btn">Alerte !</button>
+        </div>
+      </a>
+    </article>
+  </section>
+
+  <script src="../js/alerte.js"></script>
 </body>
 </html>

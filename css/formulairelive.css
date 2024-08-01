@@ -1,1 +1,114 @@
- 
+ /* Style général du body */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #0e0e10; /* Fond sombre */
+    color: #e0e0e0; /* Texte gris clair pour une meilleure lisibilité */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+/* En-tête et navigation */
+header {
+    width: 100%;
+    background-color: #18181b; /* Couleur sombre pour l'en-tête */
+    padding: 20px 0;
+    border-bottom: 2px solid #1DB954; /* Accent vert */
+    text-align: center;
+}
+
+header h2 {
+    color: #ffffff;
+    margin: 0;
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #1DB954;
+}
+
+/* Titre principal */
+h1 {
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: #1DB954; /* Vert vif pour le titre principal */
+}
+
+/* Formulaire de soumission de live */
+form {
+    width: 90%;
+    max-width: 600px;
+    background-color: #202124;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+fieldset {
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    color: #1DB954;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #1DB954;
+}
+
+input, select, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #1DB954;
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1DB954;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #17a143;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #138039;
+    transform: scale(1);
+}

@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Connexion Utilisateur</title>
-    <link rel="stylesheet" href="../css/connexion.css">
-</head>
-<body>
+
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Connexion Streamer</title>
+    <link rel="stylesheet" href="../css/connexion.css" />
+  </head>
+
+
+  <body>
     <div id="overlay"></div>
 
     <div id="validation">
-        <p> Cette communauté est privée. Seuls les membres approuvés peuvent consulter cette page. </p>
-        <button id="continuebtn">Continuer</button>
-        <button id="backbtn">Retour</button>
+      <p>
+       Cette communauté est privée. Seuls les membres approuvés peuvent consulter cette page. </p>
+      <button id="continuebtn">Continuer</button>
+      <button id="backbtn">Retour</button>
     </div>
 
+    <header>
+      <nav class="navigation">
+        <a href="../html/index.html" class="home">Accueil</a>
+      </nav>
 
 
-
+    </header>
     <div class="container">
+      <div class="login-option admin-section">
+        <h2>Admin</h2>
+        <a href="../html/logadmin.html" class="login-link">Connexion Admin</a>
+        <div class="connected_admin">
+          <a href="../php/logout_admin.php" class="logout-link" style="display: none">Déconnexion</a>
+          <a href="../html/espaceadmin.html"class="admin-space-link"style="display: none">Espace Administrateur</a>
+        </div>
+      </div>
 
-        <div class="login-option">
-            <h2>Admin</h2>
-            <a href="../html/logadmin.html" class="login-link">Connexion Admin</a>
+
+      <div class="login-option streamer-section">
+        <h2>Streamer</h2>
+        <a href="../html/logstreamer.html" class="login-link">Connexion Streamer</a>
+        <div class="connected_streamer">
+          <a href="../php/logout_streamer.php" class="logout-link" style="display: none">Déconnexion</a>
+          <a href="../html/espacestreamer.html" class="streamer-space-link" style="display: none">Espace Streamer</a>
         </div>
-        <div class="login-option">
-            <h2>Streamer</h2>
-            <a href="../html/logstreamer.html" class="login-link">Connexion Streamer</a>
-        </div>
+      </div>
     </div>
 
+    <script src="../js/connexionstreamer.js"></script>
 
-    <script src="../js/connexion.js"></script>
-</body>
-
+    
+  </body>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>evenement z-event</title>
+  <link href="../css/prochainement.css" rel="stylesheet" />
+</head>
+
+
+<body>
+  <header>
+  <!-- barre de menu-->
+  <nav class="navigation">
+    <a href="../html/index.html">Accueil</a>
+    <a href="../html/prochainement.html">Prochainement</a>
+    <a href="../html/live.html">Live</a>
+    <a href="../html/streamer.html">Streamer</a>
+    <a href="../html/Association.html"> Association </a>
+    <a href="../html/connexion.html" class="connexion">Mon espace</a>
+</nav>
+  <!-- fin-->
+
+  <!-- 
+  slide des prochain live-->
+  <div class="slider-container">
+    <h2> En ce moment : </h2>
+    <div class="slider">
+      <div class="slide">
+        <iframe width="500" height="315" src="../image/vidéo actualiter/live pro.png" frameborder="2px"></iframe>
+      </div>
+      <div class="slide">
+        <iframe width="500" height="315" src="../image/vidéo actualiter/live pro.png" frameborder="2px" ></iframe>
+      </div>
+      <div class="slide">
+        <iframe width="500" height="315" src="../image/vidéo actualiter/live pro.png" frameborder="2px" ></iframe>
+      </div>
+      <div class="slide">
+        <iframe width="500" height="315" src="../image/vidéo actualiter/live pro.png" frameborder="2px" ></iframe>
+      </div>
+      <div class="slide">
+        <iframe width="500" height="315" src="../image/vidéo actualiter/live pro.png" frameborder="2px" ></iframe>
+      </div>
+    </div>
+    <button class="next" onclick="nextSlide()"> >  </button>
+    <button class="prev" onclick="prevSlide()"> <  </button>
+</div>
+
+
+<!--Alerte par mail-->
+<div id="overlay_bis"></div>
+
+<div id="loginalerte">
+  <p>Veuillez saisir votre texte :</p>
+  <input type="text" id="userInput" placeholder="Entrez votre texte ici...">
+  <br><br>
+  <button id="accept">Accepter</button>
+  <button id="cancel">Refuser</button>
+</div>
+
+
+</header>
+
+<script src="../js/alerte.js"></script>
+</body>
+</html>

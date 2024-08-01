@@ -1,54 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Espace Streamer</title>
-    <link href="../css/espacestreamer.css" rel="stylesheet"/>
-</head>
-<body>
-    <head>
-        <!-- navigation-->
-        <nav class="navigation">
-            <nav class="navigation">
-                <a href="../html/espacestreamer.html">Accueil</a>
-                <a href="../html/statistique.html">Statistique</a>
-                <a href="../html/formulairelive.html">Formulaire</a>
-            </nav>
+    <link href="../css/espacestreamer.css" rel="stylesheet" />
+    <script src="../js/check_streamersession.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- navigation-->
+      <h2>Bienvenue, !<span id="streamer-name"></span>!</h2>
+      <nav class="navigation">
+        <a href="../html/index.html">Menu Principal</a>
+        <a href="../html/espacestreamer.html">Accueil</a>
+        <a href="../html/statistique.html">Statistique</a>
+        <a href="../html/formulairelive.html">Formulaire</a>
+        <a href="../php/logout_streamer.php">Déconnexion</a>
+      </nav>
+    </header>
 
-        <!-- recap des lives streamer -->
-
-        <div class="recap">
-            <a href="#" class="button-link">
-                <button>
-                  <img src="../image/vidéo actualiter/prochainement.png" alt=" Miniature">
-                </button>
-                <button class="alerte"> Changer </button>
-            </a>
-            
-            <a href="#" class="button-link">
-                <button>
-                   <img src="../image/vidéo actualiter/prochainement.png" alt=" Miniature">
-                </button>
-                <button class="alerte"> Changer </button>
-            </a>
-
-            <a href="#" class="button-link">
-                <button>
-                  <img src="../image/vidéo actualiter/prochainement.png" alt=" Miniature">
-                </button>
-                <button class="alerte"> Changer </button>
-            </a>
-            
+    <!-- recap des lives streamer -->
+    <section class="espacestreamer-section">
+      <div class="video">
+        <div class="button-link">
+          <button>
+            <img
+              src="../image/vidéo actualiter/prochainement.png"
+              alt="Miniature"
+            />
+          </button>
+          <button class="alerte">Changer</button>
         </div>
 
-        <!--recap live streamer connecter-->
+        <div class="button-link">
+          <button>
+            <img
+              src="../image/vidéo actualiter/prochainement.png"
+              alt="Miniature"
+            />
+          </button>
+          <button class="alerte">Changer</button>
+        </div>
 
+        <div class="button-link">
+          <button>
+            <img
+              src="../image/vidéo actualiter/prochainement.png"
+              alt="Miniature"
+            />
+          </button>
+          <button class="alerte">Changer</button>
+        </div>
 
+        <div class="button-link">
+          <button>
+            <img
+              src="../image/vidéo actualiter/prochainement.png"
+              alt="Miniature"
+            />
+          </button>
+          <button class="alerte">Changer</button>
+        </div>
 
-
-
-        
-    </head>
-</body>
+        <div class="button-link">
+          <button>
+            <img
+              src="../image/vidéo actualiter/prochainement.png"
+              alt="Miniature"
+            />
+          </button>
+          <button class="alerte">Changer</button>
+        </div>
+      </div>
+    </section>
+    <!--recap live streamer connecter-->
+  </body>
 </html>

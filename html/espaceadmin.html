@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Création Streamer</title>
+  <link rel="stylesheet" href="../css/espaceadmin.css">
+  <script src="../js/check_adminsession.js" defer></script>
+</head>
+<body>
+  <header>
+    <h2>Bienvenue, <span id="admin-name"></span>!</h2>
+    <nav class="navigation">
+      <a href="../html/index.html">Accueil</a>
+      <a href="../html/actualite.html">Actualité</a>
+      <a href="../html/live.html">Live</a>
+      <a href="../html/streamer.html">Streamer</a>
+      <a href="../php/logout_admin.php" class="disconnect">Déconnexion</a>
+    </nav>
+  </header>
+
+  
+
+  <main>
+    <section class="form-section">
+      
+      <h2>Création Streamer</h2>
+      <form id="create-streamer-form" method="POST" action="../php/create_streamer.php">
+        <div class="input-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input-group">
+          <label for="firstname">Prénom</label>
+          <input type="text" id="firstname" name="firstname" required>
+        </div>
+        <div class="input-group">
+          <label for="pseudo">Pseudo</label>
+          <input type="text" id="pseudo" name="pseudo" required>
+        </div>
+        <div class="input-group">
+          <label for="age">Âge</label>
+          <input type="number" id="age" name="age" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <button type="submit" class="submit-btn">Créer</button>
+      </form>
+    </section>
+  </main>
+ <br> 
+</body>
+</html>

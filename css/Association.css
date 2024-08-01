@@ -1,73 +1,107 @@
 
 body {
-  margin: 0; /* aucun espace entre les bords de cet éléments et ses élément adjacents ou conteneur parent*/
-  background-color: #3c3e3f;
-  font-family: arial narrow, sans-serif; /*Police*/
-  font-size: 20px;
+  font-family: 'Roboto', Arial, sans-serif; /* Utilisation d'une police plus moderne */
+  background-color: #0e0e10; /* Fond noir/gris très foncé */
+  color: #e0e0e0; /* Texte légèrement gris pour moins de contraste */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #18181b; /* En-tête légèrement plus clair pour la différenciation */
+  padding: 20px;
+  border-bottom: 2px solid #1DB954; /* Ligne de séparation verte */
+}
+
+nav.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 0;
+  background-color: #202225; /* Fond de navigation légèrement différent */
+  border-bottom: 2px solid #1DB954; /* Ligne de séparation verte */
+}
+
+nav.navigation a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+nav.navigation a:hover {
+  color: #1DB954; /* Vert vif pour survol des liens */
+}
+
+nav.navigation a.connexion {
+  background-color: #1DB954; /* Vert vif pour le bouton "Mon espace" */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 /*____________________________________________________________________________________________________________________*/
 
-/* Styles de la barre de navigation */
-.navigation {
-  display: flex;/*efficace pour disposer, aligner et distribuer l'espace*/
-  align-items: center; /*pour aligner les éléments enfants le long de l'axe croisé*/
-  background-color: #1E1E1E;
-  padding: 10px 20px; /* (haut et bas px) / (gauche et droite px) */
-  border-bottom: 20px solid #3C3E3F;/* (l'épaisseur) / (bordure continue et pleine) / (couleur) */
-  font-size: 15px;
-}
-
-.navigation a {
-  color: white;/* couleur du texte*/
-  text-decoration: none;/* supprime déco */
-  padding: 10px 15px;/* (haut et bas px) / (gauche et droite px) */
-}
-
-.navigation a:hover {
-  background-color: #3C3E3F;/* couleur du fond au survol*/;
-}
-
-.connexion {
-  margin-left: auto; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
-  border: 2px solid white;/* (l'épaisseur) / (bordure continue et pleine) / (couleur) */
-  border-radius: 5px; /* pour arrondir les coins */
-}
-/*____________________________________________________________________________________________________________________*/
-
-/*  présentation dons */
+/* Style pour la section de présentation */
 .presentation {
-  margin-top: 20px;
-    text-align: center;
-    font-size: 20px;
-    max-width: 1000px; /* Limite la largeur du conteneur à 600px */
-    margin: 20px auto; /* Centrage horizontal */
-    padding: 20px;
-    color: white;
+  text-align: center;
+  margin: 40px 0;
 }
 
-/*____________________________________________________________________________________________________________________*/
+.presentation h1 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
 
-/*association */
 .liste-association {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.liste-association button {
-  margin-left: auto; /*pousser un élément aussi loin que possible vers la droite à l'intérieur de son conteneur (le navigateur calcule automatiquement la quantité d'espace disponible à gauche)*/
-  margin:20px;
-  padding: 10px;
-  border-radius: 5px; /* pour arrondir les coins */
-  border: 2px solid #45a049;
+.association-button {
+  background-color: #1DB954;
   color: white;
-  background-color: #3C3E3F;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: inline-block;
 }
 
-button:hover {
-  background-color: #45a049;/* couleur du fond au survol*/;
+.association-button:hover {
+  background-color: #17a143;
 }
 
-/*____________________________________________________________________________________________________________________*/
+/* Style pour les descriptions de dons */
+h3 {
+  color: #ffffff;
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 1.8em;
+}
+
+p {
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 10px auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+p#1euro, p#2euro, p#3euro {
+  background-color: #18181b;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+p#1euro:hover, p#2euro:hover, p#3euro:hover {
+  background-color: #1e1e22;
+}

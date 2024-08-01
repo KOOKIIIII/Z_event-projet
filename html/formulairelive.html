@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de Live Streaming</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="../css/formulairelive.css" rel="stylesheet"/>
+    <script src="../js/check_streamersession.js" defer></script>
 </head>
 <body>
-    <nav class="navigation">
-        <a href="../html/index.html">Accueil</a>
-        <a href="../html/actualite.html">Actualité</a>
-        <a href="../html/live.html">Live</a>
-        <a href="../html/streamer.html">Streamer</a>
-        <a href="../html/connexion.html" class="connexion">Mon espace</a>
-    </nav>
+    <header>
+        <!-- navigation-->
+        <h2>Bienvenue <span id="streamer-name"></span>!</h2>
+        <br>
+        <nav class="navigation">
+            <nav class="navigation">
+                <a href="../html/index.html">Menu Principal</a>
+                <a href="../html/espacestreamer.html">Accueil</a>
+                <a href="../html/statistique.html">Statistique</a>
+                <a href="../html/formulairelive.html">Formulaire</a>
+                <a href="../php/logout_streamer.php">Déconnexion</a>
+            </nav>
+    </header>
 
     <h1>Formulaire Live </h1>
     <form id="liveForm">
@@ -46,70 +53,116 @@
             <select id="starttime" name="starttime" required>
                 <option value="fin">Début</option>
                 <option value="début">1h</option>
+                <option value="début">1h30</option>
                 <option value="début">2h</option>
+                <option value="début">2h30</option>
                 <option value="début">3h</option>
+                <option value="début">3h30</option>
                 <option value="début">4h</option>
+                <option value="début">4h30</option>
                 <option value="début">5h</option>
+                <option value="début">5h30</option>
                 <option value="début">6h</option>
+                <option value="début">6h30</option>
                 <option value="début">7h</option>
+                <option value="début">7h30</option>
                 <option value="début">8h</option>
+                <option value="début">8h30</option>
                 <option value="début">9h</option>
+                <option value="début">9h30</option>
                 <option value="début">10h</option>
+                <option value="début">10h30</option>
                 <option value="début">11h</option>
+                <option value="début">11h30</option>
                 <option value="début">12h</option>
+                <option value="début">12h30</option>
                 <option value="début">13h</option>
+                <option value="début">13h30</option>
                 <option value="début">14h</option>
+                <option value="début">14h30</option>
                 <option value="début">15h</option>
+                <option value="début">15h30</option>
                 <option value="début">16h</option>
+                <option value="début">16h30</option>
                 <option value="début">17h</option>
+                <option value="début">17h30</option>
                 <option value="début">18h</option>
+                <option value="début">18h30</option>
                 <option value="début">19h</option>
+                <option value="début">19h30</option>
                 <option value="début">20h</option>
+                <option value="début">20h30</option>
                 <option value="début">21h</option>
+                <option value="début">21h30</option>
                 <option value="début">22h</option>
+                <option value="début">22h30</option>
                 <option value="début">23h</option>
-                <option value="début">24h</option>
+                <option value="début">23h30</option>
+                <option value="début">00h</option>
+                <option value="début">00h30</option>
             </select>
 
             <label for="endhour"> Heure du fin:</label>
             <select id="endtime" name="endtime" required>
-                <option value="fin">Fin</option>
+                <option value="finDébut</option>
                 <option value="fin">1h</option>
-                <option value="Fin">2h</option>
-                <option value="Fin">3h</option>
-                <option value="Fin">4h</option>
-                <option value="Fin">5h</option>
-                <option value="Fin">6h</option>
-                <option value="Fin">7h</option>
-                <option value="Fin">8h</option>
-                <option value="Fin">9h</option>
-                <option value="Fin">10h</option>
-                <option value="Fin">11h</option>
-                <option value="Fin">12h</option>
-                <option value="Fin">13h</option>
-                <option value="Fin">14h</option>
-                <option value="Fin">15h</option>
-                <option value="Fin">16h</option>
-                <option value="Fin">17h</option>
-                <option value="Fin">18h</option>
-                <option value="Fin">19h</option>
-                <option value="Fin">20h</option>
-                <option value="Fin">21h</option>
-                <option value="Fin">22h</option>
-                <option value="Fin">23h</option>
-                <option value="Fin">24h</option>
-            </select><br>
-
-            
-
+                <option value="fin">1h30</option>
+                <option value="fin">2h</option>
+                <option value="fin">2h30</option>
+                <option value="fin">3h</option>
+                <option value="fin">3h30</option>
+                <option value="fin">4h</option>
+                <option value="fin">4h30</option>
+                <option value="fin">5h</option>
+                <option value="fin">5h30</option>
+                <option value="fin">6h</option>
+                <option value="fin">6h30</option>
+                <option value="fin">7h</option>
+                <option value="fin">7h30</option>
+                <option value="fin">8h</option>
+                <option value="fin">8h30</option>
+                <option value="fin">9h</option>
+                <option value="fin">9h30</option>
+                <option value="fin">10h</option>
+                <option value="fin">10h30</option>
+                <option value="fin">11h</option>
+                <option value="fin">11h30</option>
+                <option value="fin">12h</option>
+                <option value="fin">12h30</option>
+                <option value="fin">13h</option>
+                <option value="fin">13h30</option>
+                <option value="fin">14h</option>
+                <option value="fin">14h30</option>
+                <option value="fin">15h</option>
+                <option value="fin">15h30</option>
+                <option value="fin">16h</option>
+                <option value="fin">16h30</option>
+                <option value="fin">17h</option>
+                <option value="fin">17h30</option>
+                <option value="fin">18h</option>
+                <option value="fin">18h30</option>
+                <option value="fin">19h</option>
+                <option value="fin">19h30</option>
+                <option value="fin">20h</option>
+                <option value="fin">20h30</option>
+                <option value="fin">21h</option>
+                <option value="fin">21h30</option>
+                <option value="fin">22h</option>
+                <option value="fin">22h30</option>
+                <option value="fin">23h</option>
+                <option value="fin">23h30</option>
+                <option value="fin">00h</option>
+                <option value="fin">00h30</option>
+            </select><bfin         
+<br>
             <label for="pegi">PEGI:</label>
             <select id="pegi" name="pegi" required>
                 <option value="--">--</option>
-                <option value="3">3</option>
-                <option value="7">7</option>
-                <option value="12">12</option>
-                <option value="16">16</option>
-                <option value="18">18</option>
+                <option value="3">+3</option>
+                <option value="7">+7</option>
+                <option value="12">+12</option>
+                <option value="16">+16</option>
+                <option value="18">+18</option>
             </select><br>
 
             <label for="equipment">Liste de matériel (Avec la marque):</label><br>

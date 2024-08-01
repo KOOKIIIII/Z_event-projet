@@ -1,9 +1,14 @@
-// script.js
-document.getElementById('login').addEventListener('submit', function(event) {
-    const emil = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    if (!email || !password) {
-        alert("Veuillez remplir tous les champs!");
-        event.preventDefault();
-    }
+document.getElementById("login").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const formData = new FormData(this);
+
+  const name = formData.get("name");
+  const password = formData.get("password");
+  if (!name || !password) {
+    alert("Veuillez remplir tous les champs!");
+    return;
+  }
+
+  this.submit();
 });

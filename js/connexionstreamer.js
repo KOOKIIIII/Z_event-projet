@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM entièrement chargé et analysé");
 
-  // Afficher le popup de validation
+  //Appel de la fonction 
   displayPopup();
 
   // Vérification de la session du streamer

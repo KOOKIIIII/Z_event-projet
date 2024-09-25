@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: black;
-    color: black;
+    color: #45a049; /* Changement de la couleur de texte pour un meilleur contraste */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,8 +13,9 @@ body {
     background-color: black;
     padding: 20px;
     border: 1px solid #45a049;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Utilisation de pourcentages pour la responsivité */
+    max-width: 300px; /* Garde une largeur maximale pour les grands écrans */
 }
 
 .login-form h2 {
@@ -38,6 +39,8 @@ body {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background-color: #f8f8f8;
+    color: black;
 }
 
 button {
@@ -53,4 +56,16 @@ button {
 
 button:hover {
     background-color: #367c39;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 480px) {
+    .login-form {
+        width: 100%; /* Le formulaire prend toute la largeur de l'écran */
+        padding: 15px; /* Réduction du padding pour économiser de l'espace */
+    }
+
+    button {
+        font-size: 14px; /* Taille du texte légèrement réduite sur les petits écrans */
+    }
 }

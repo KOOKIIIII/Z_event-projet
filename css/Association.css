@@ -105,3 +105,51 @@ p#1euro, p#2euro, p#3euro {
 p#1euro:hover, p#2euro:hover, p#3euro:hover {
   background-color: #1e1e22;
 }
+/* responsive */
+
+/* Media Queries pour améliorer la responsivité */
+@media (max-width: 768px) {
+  .presentation h1 {
+    font-size: 2em; /* Réduction de la taille du titre pour les petits écrans */
+    margin-bottom: 15px;
+  }
+
+  .association-button {
+    padding: 8px 15px; /* Réduction de l'espace des boutons */
+    font-size: 0.9em; /* Ajustement de la taille de la police */
+  }
+
+  p {
+    max-width: 90%; /* Assure que les paragraphes s'adaptent à la largeur de l'écran */
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 1.5em; /* Réduction de la taille des sous-titres */
+  }
+
+  .liste-association {
+    gap: 15px; /* Réduction de l'écart entre les boutons pour les petits écrans */
+  }
+}
+
+@media (max-width: 480px) {
+  .presentation h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .association-button {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p {
+    max-width: 95%;
+    line-height: 1.5;
+  }
+}

@@ -71,7 +71,7 @@ nav.connexion a:hover {
 }
 
 button {
-    background-color: #ff4500; /* Orange vif pour le bouton */
+    background-color: #1DB954; /* Orange vif pour le bouton */
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -81,5 +81,43 @@ button {
 }
 
 button:hover {
-    background-color: #e63900; /* Couleur de survol pour le bouton */
+    background-color: #17a143; /* Couleur de survol pour le bouton */
 }
+
+/* responsive*/
+
+@media (max-width: 768px) {
+    nav.navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav.navigation a {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .filter select {
+        width: 100%;
+    }
+}
+

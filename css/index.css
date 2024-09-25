@@ -56,6 +56,12 @@ nav.connexion a:hover {
 
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 
 /*___________________________________________________________________________________________________________________________________________________________*/
 
@@ -92,6 +98,8 @@ nav.connexion a:hover {
     background-color: #17a143; /* Légère variation de vert pour le survol */
 }
 
+
+/*slide*/
 .slider-container {
     text-align: center;
     margin: 20px auto;
@@ -119,11 +127,11 @@ nav.connexion a:hover {
 iframe {
     border: none; /* Suppression de la bordure */
     border-radius: 10px; /* Bords arrondis */
-    box-shadow: 0 0 10px #1DB954
+    box-shadow: 0 0 10px rgba(26, 255, 0, 0.5); /* Ombre douce */
 }
 
 button.prev, button.next {
-    background-color: #1DB954; 
+    background-color: rgba(0, 0, 0, 0.7); /* Boutons semi-transparents */
     color: white;
     border: none;
     padding: 10px 15px;
@@ -144,5 +152,26 @@ button.next {
 }
 
 button.prev:hover, button.next:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(31, 227, 9, 0.5);
+}
+
+/*responsive*/
+@media only screen and (max-width: 768px) {
+    nav.navigation {
+        flex-direction: column; /* Navigation en colonne sur petits écrans */
+    }
+
+    .def {
+        font-size: 20px; /* Réduire la taille du texte sur les petits écrans */
+        padding: 10px;
+    }
+
+    .slider-container {
+        width: 100%; /* Assurer que le slider occupe toute la largeur */
+    }
+
+    button.prev, button.next {
+        font-size: 1.2em; /* Réduire la taille des boutons pour les petits écrans */
+        padding: 8px 10px;
+    }
 }

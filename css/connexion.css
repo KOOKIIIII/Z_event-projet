@@ -1,4 +1,3 @@
-/* connexion.css */
 
 /* Style général du body */
 body {
@@ -137,4 +136,67 @@ header {
 
 .login-link:hover, .logout-link:hover, .admin-space-link:hover, .streamer-space-link:hover {
   background-color: #17a143;
+}
+
+
+/* rsponsive*/
+
+/* Pour les tablettes (max 768px) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+  }
+
+  .login-option {
+    width: 90%;
+    max-width: 350px;
+    margin: 15px;
+  }
+
+  #validation {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #validation p {
+    font-size: 1em;
+  }
+}
+
+/* Pour les smartphones (max 480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 15px 0;
+  }
+
+  .navigation a {
+    padding: 0 10px;
+    font-size: 0.9em;
+  }
+
+  .login-option h2 {
+    font-size: 1.5em;
+  }
+
+  .login-option {
+    width: 95%;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  #validation {
+    width: 95%;
+    padding: 10px;
+  }
+
+  #validation button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  #backbtn {
+    padding: 8px 15px;
+  }
 }

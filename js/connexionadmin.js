@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM entièrement chargé et analysé");
 
-  // Afficher le popup de validation
-  displayPopup();
+
 
   // Vérification de la session de l'administrateur
   fetch("../php/check_admin.php")
@@ -33,24 +32,3 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Erreur:", error));
 });
 
-function displayPopup() {
-  console.log("Affichage du popup");
-  document.getElementById("validation").style.display = "block";
-  document.getElementById("overlay").style.display = "block";
-
-  document.getElementById("continuebtn").addEventListener("click", function () {
-    console.log("Bouton Continuer cliqué");
-    closePopup();
-  });
-
-  document.getElementById("backbtn").addEventListener("click", function () {
-    console.log("Bouton Retour cliqué");
-    window.location.href = "index.html";
-  });
-}
-
-function closePopup() {
-  console.log("Fermeture du popup");
-  document.getElementById("validation").style.display = "none";
-  document.getElementById("overlay").style.display = "none";
-}

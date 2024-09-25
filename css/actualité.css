@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', Arial, sans-serif; /* Utilisation d'une police plus moderne */
     background-color: #0e0e10; /* Fond noir/gris très foncé */
     color: #e0e0e0; /* Texte légèrement gris pour moins de contraste */
+    font-size: 16px; /* Taille de texte par défaut */
     margin: 0;
     padding: 0;
 }
@@ -164,7 +165,7 @@ nav.connexion a:hover {
     margin-bottom: 5px;
 }
 
-.alerte.btn {
+.alertebtn {
     background-color: #45a049;
     color: #ffffff;
     border: none;
@@ -174,6 +175,60 @@ nav.connexion a:hover {
     transition: background-color 0.3s ease;
 }
 
-.alerte.btn:hover {
+.alertebtn:hover {
     background-color: #45a049;
+}
+
+/*responsive*/
+/* Réactivité pour les écrans de moins de 768px (tablettes et smartphones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Réduction pour les petits écrans */
+    }
+    
+    nav.navigation {
+        flex-direction: column; /* Les éléments du menu passent en colonne */
+        text-align: center;
+    }
+
+    .video {
+        margin-bottom: 20px; /* Réduction de l'espace entre les vidéos */
+    }
+
+    .video img {
+        width: 100%; /* L'image prend toute la largeur de son conteneur */
+    }
+
+    .actualite {
+        width: 100%; /* L'actualité prend toute la largeur disponible */
+        padding: 15px; /* Moins de padding pour les petits écrans */
+    }
+
+    .title h1 {
+        font-size: 1.5em; /* Taille du texte réduite */
+    }
+
+    #loginalerte.modal {
+        width: 90%; /* La boîte modale prend presque toute la largeur de l'écran */
+    }
+
+}
+
+/* Réactivité pour les écrans encore plus petits (moins de 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 15px; /* Réduction du padding pour gagner de la place */
+    }
+
+    .video h2 {
+        font-size: 1.2em; /* Réduire la taille des titres */
+    }
+
+    .modal-buttons .btn {
+        padding: 8px 15px; /* Ajuster les boutons de la boîte modale */
+    }
+
+    #loginalerte input {
+        width: 100%; /* Les champs d'entrée prennent toute la largeur */
+    }
 }
